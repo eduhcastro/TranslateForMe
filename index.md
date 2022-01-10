@@ -1,38 +1,165 @@
-## Translate For Me
+<div id="top"></div>
 
-You can use the [editor on GitHub](https://github.com/skillerm/TranslateForMe/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="#">
+    <img src="https://i.ibb.co/M6C9jnG/icon2.png" alt="Logo" width="80" height="80">
+  </a>
 
-### Markdown
+  <h3 align="center">TranslateForMe</h3>
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+  <p align="center">
+    Offer a translation system to your users, a plugin capable of translating your website, simply and efficiently!
+    <br />
+    <br />
+    <a href="#">View Demo</a>
+    ·
+    <a href="https://github.com/skillerm/TranslateForMeissues">Report Bug</a>
+    ·
+    <a href="https://github.com/skillerm/TranslateForMe/issues">Request Feature</a>
+  </p>
+</div>
 
-```markdown
-Syntax highlighted code block
+<!-- ABOUT THE PROJECT -->
+## About The Project
+A little about:
 
-# Header 1
-## Header 2
-### Header 3
+* I looked a lot about some plugin that did the same function but I couldn't find it, so I decided to do my own!
+* All tags and classes were created with random names, not to affect your site and its styles.
+* The project was structured entirely with pure javascript, only Google translate is instantiated
 
-- Bulleted
-- List
+## Comum area
 
-1. Numbered
-2. List
+### Usage
+Add a script section with attribute **"translate="forme""**
 
-**Bold** and _Italic_ and `Code` text
+Example:
 
-[Link](url) and ![Image](src)
+```html
+<script translate="forme" src="translateforme.google.js"></script>
+```
+This attribute is mandatory for the plugin to work.
+
+Launch the plugin
+```html
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+      new TranslateForMe.init({
+        languages: ['en', 'pt'],
+        saveLanguage: true,
+        fonts: true
+      });
+    });
+</script>
+```
+To work properly, instantiate the class only after the DOM is loaded.
+
+### API
+#### init([options])
+```html
+<script translate="forme" src="translateforme.google.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+      new TranslateForMe.init({
+        languages: ['en', 'pt'],
+        saveLanguage: true,
+        fonts: true
+      });
+    });
+</script>
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
 
-### Jekyll Themes
+Options:
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/skillerm/TranslateForMe/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+- languages
 
-### Support or Contact
+  type: `Array[]`  
+  Default: `'<unknown>'`
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
-<script src="asdasd"></script>
+  Languages that will be added in the menu   <a href="#more">List</a>
+
+- saveLanguage
+
+  Type: `Boolean`  
+  Default: `false`
+
+  Enables the save language  mode, if activated, create a checkbox in the menu, if true, all pages will be translated according to the selected language.
+  
+- fonts
+
+  Type: `Boolean`  
+  Default: `true`
+
+  If true, load Open Sans font style, for better menu look. (If it already exists, it will not be loaded.)
+
+### More
+
+languages:
+``
+["pt","en"]
+``
+More languages will be added soon.
+
+
+## Developer area
+### Built With
+
+For development mode, here is a list of used frameworks/libraries
+* [TypeScript](https://www.typescriptlang.org/)
+* [Csso](https://github.com/css/csso)
+
+Google translator was not included due to being an external module
+
+
+<!-- GETTING STARTED -->
+
+#### Starting
+
+Install all modules.
+* npm
+  ```sh
+  npm install
+  ```
+
+#### Commands
+
+* Build
+   ```sh
+   npm run build
+   
+   Output:
+   > translateforme@version build
+   > npx tsc && npx ts-node src/addons/csso.ts && npx ts-node src/addons/json.ts
+   ```
+   All files will be created in the ./build folder
+   
+* Json
+  ```sh
+   npm run json
+   
+   Output:
+   > translateforme@version json
+   > npx ts-node src/addons/json.ts
+   ```
+   It will create a minified version of the translateforme.flags.json file, found in ./build
+* Csso
+  ```sh
+   npm run csso
+   
+   Output:
+   > translateforme@version csso
+   > npx ts-node src/addons/csso.ts
+   ```
+  It will create a minified version of the translateforme.google.css file, found in ./build
+   
+### ...
+Sorry for the little information, soon add more details about each function of the script.
+
+<!-- CONTACT -->
+## Contact
+
+Eduardo Castro - eduh.castro19@gmail.com
+
