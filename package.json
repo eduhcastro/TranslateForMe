@@ -1,6 +1,6 @@
 {
   "name": "translateforme",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "index.js",
   "license": "Apache-2.0",
   "author": {
@@ -15,7 +15,7 @@
     "build": "npx tsc && npx ts-node src/addons/csso.ts && npx ts-node src/addons/json.ts",
     "json": "npx ts-node src/addons/json.ts",
     "csso": "npx ts-node src/addons/csso.ts",
-    "main": "npx ts-node src/translatetome.google.ts"
+    "main": "npx ts-node src/translateforme.google.ts"
   },
   "devDependencies": {
     "@types/csso": "^5.0.0",

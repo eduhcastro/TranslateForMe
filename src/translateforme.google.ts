@@ -119,7 +119,7 @@ const TranslateForMe = {
     menuComponent1_header.appendChild(menuComponent1_header_options);
 
     const menuComponent1_header_options_button = document.createElement("_nObtut");
-    menuComponent1_header_options_button.classList.add("vlOXsRZG", "apJZTsAb", "sZPanrSdXu", "lksoO", "yuHFGkiOEFCADwsQGsOE-close-button");
+    menuComponent1_header_options_button.classList.add("vlOXsRZG", "apJZTsAb", "sZPanrSdXu", "lksoO", "w1DtH", "yuHFGkiOEFCADwsQGsOE-close-button");
     menuComponent1_header_options.appendChild(menuComponent1_header_options_button);
 
     const menuComponent1_header_options_button_image_close = document.createElement("img");
@@ -306,7 +306,7 @@ const TranslateForMe = {
         throw new Error("[TranslateForMe] Can't find script element");
         return;
       }
-      return scr.src.split("translatetome.google.js")[0];
+      return scr.src.split("translateforme.google.js")[0];
     },
 
     setCookie: function (name: string, value: string, days: number) {
@@ -344,7 +344,7 @@ const TranslateForMe = {
     }): void {
       const styles = document.createElement('link');
       styles.rel = 'stylesheet';
-      styles.href = TranslateForMe.attributes.getPath().split("translateforme.google.js")[0] + 'translateforme.google.css';
+      styles.href = TranslateForMe.attributes.getPath() + 'translateforme.google.css';
       document.head.appendChild(styles);
 
       if (fonts) {
@@ -391,7 +391,7 @@ const TranslateForMe = {
     //  return JSON.parse(rawdata);
     //},
     flags: async function () {
-      const flag = await fetch(TranslateForMe.attributes.getPath().split("translateforme.google.js")[0] + '/translateforme.flags.json')
+      const flag = await fetch(TranslateForMe.attributes.getPath() + '/translateforme.flags.json')
       const flagJson = await flag.json()
       return flagJson
     },
@@ -462,6 +462,17 @@ const TranslateForMe = {
         }
       }
     },
+    checkSave: function (value: any) {
+      if(typeof TranslateForMe.attributes.getCookie("googtrans") !== "undefined" || TranslateForMe.attributes.getCookie("googtrans") !== null){
+          if(value !== null || value !== undefined) {
+            if(value === "false"){
+              return TranslateForMe.actions.desactiveSave(false);
+            }
+          }else{
+            return TranslateForMe.actions.desactiveSave(false);
+          }
+      }
+    },
     saveConfiguration: function () {
       const _S = document.getElementById("sCnFg0") as any;
       if (_S === null || typeof _S === undefined) {
@@ -482,7 +493,7 @@ const TranslateForMe = {
       saveLanguage = false,
       fonts = true,
     }) {
-      TranslateForMe.actions.desactiveSave(saveLanguage);
+      TranslateForMe.actions.checkSave(TranslateForMe.attributes.getCookie("TranslateForMe-Save"));
       langsSeted = TranslateForMe.loadComponents.setLanguages([...new Set(languages)]);
       TranslateForMe.loadComponents.scripts();
       TranslateForMe.loadComponents.styles({ fonts });

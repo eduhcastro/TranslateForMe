@@ -161,6 +161,10 @@ _nobtut{
     border-image: initial;
 }
 
+.w1DtH {
+	width: 0 !important;
+}
+
 html * {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale
