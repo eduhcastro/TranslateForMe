@@ -16,7 +16,7 @@
     <br />
     <a href="https://skillerm.github.io/TranslateForMe/">View Demo</a>
     ·
-    <a href="https://github.com/skillerm/TranslateForMeissues">Report Bug</a>
+    <a href="https://github.com/skillerm/TranslateForMe/issues">Report Bug</a>
     ·
     <a href="https://github.com/skillerm/TranslateForMe/issues">Request Feature</a>
   </p>
