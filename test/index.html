@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<body>
+
+  <h1>My Web Page</h1>
+  <p>Hello everybody!</p>
+  <p>Translate this page:</p>
+
+  <script translate="forme" src="../build/translateforme.google.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      new TranslateForMe.init({
+        languages: ['en', 'pt'],
+        saveLanguage: true,
+        fonts: true
+      });
+    });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+{
+  "name": "translateforme",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "Apache-2.0",
+  "author": {
+    "name": "Eduardo Castro",
+    "email": "eduh.castro19@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skillerm/TranslateForMe/tree/main"
+  },
+  "scripts": {
+    "build": "npx tsc && npx ts-node src/addons/csso.ts && npx ts-node src/addons/json.ts",
+    "json": "npx ts-node src/addons/json.ts",
+    "csso": "npx ts-node src/addons/csso.ts",
+    "main": "npx ts-node src/translatetome.google.ts"
+  },
+  "devDependencies": {
+    "@types/csso": "^5.0.0",
+    "@types/node": "^17.0.8",
+    "typescript": "^4.5.4"
+  },
+  "dependencies": {
+    "csso": "^5.0.2"
+  }
+}
