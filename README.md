@@ -14,7 +14,7 @@
     Offer a translation system to your users, a plugin capable of translating your website, simply and efficiently!
     <br />
     <br />
-    <a href="#">View Demo</a>
+    <a href="https://skillerm.github.io/TranslateForMe/">View Demo</a>
     ·
     <a href="https://github.com/skillerm/TranslateForMeissues">Report Bug</a>
     ·
