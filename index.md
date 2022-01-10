@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Translate For Me
 
 You can use the [editor on GitHub](https://github.com/skillerm/TranslateForMe/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
