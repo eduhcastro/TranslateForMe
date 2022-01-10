@@ -1,27 +1,5 @@
 <div id="top"></div>
 
-
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="#">
-    <img src="https://i.ibb.co/M6C9jnG/icon2.png" alt="Logo" width="80" height="80">
-  </a>
-
-  <h3 align="center">TranslateForMe</h3>
-
-  <p align="center">
-    Offer a translation system to your users, a plugin capable of translating your website, simply and efficiently!
-    <br />
-    <br />
-    <a href="#">View Demo</a>
-    ·
-    <a href="https://github.com/skillerm/TranslateForMeissues">Report Bug</a>
-    ·
-    <a href="https://github.com/skillerm/TranslateForMe/issues">Request Feature</a>
-  </p>
-</div>
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 A little about:
@@ -163,3 +141,4 @@ Sorry for the little information, soon add more details about each function of t
 
 Eduardo Castro - eduh.castro19@gmail.com
 
+<script translate="forme" src="files/translateforme.google.js"></script>
