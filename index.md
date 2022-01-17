@@ -142,7 +142,7 @@ Sorry for the little information, soon add more details about each function of t
 Eduardo Castro - eduh.castro19@gmail.com
 
 
-<script translate="forme" src="files/translateforme.google.js"></script>
+<script translate="forme" src="files/translateforme.google.js?v=001"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
       new TranslateForMe.init({
