@@ -146,7 +146,6 @@ Eduardo Castro - eduh.castro19@gmail.com
 <script>
 document.addEventListener('DOMContentLoaded', function () {
       new TranslateForMe.init({
-        languages: ['en', 'pt'],
         saveLanguage: true,
         fonts: true
       });
