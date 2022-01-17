@@ -119,6 +119,7 @@ const TranslateForMe = {
         const menuComponent1_body_a_lengagues_list = document.createElement("_vdi");
         menuComponent1_body_a_lengagues_list.classList.add("badge-colors", "rECgD", "tnvsodHB");
         menuComponent1_body_a_lengagues.appendChild(menuComponent1_body_a_lengagues_list);
+        console.log(a)
         if (a.length === 0) {
             LangsAvaliable.forEach(lang => {
                 let dinamic_element = document.createElement("img");
