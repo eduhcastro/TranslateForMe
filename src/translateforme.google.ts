@@ -15,6 +15,8 @@ type B = {
   }
 }
 
+const LangsAvaliable = ["en","pt","bn","zh-CN","zh-TW","es","fr","ja","ru"]
+
 function googleTranslateElementInit() {
   if (google)
     new google.translate.TranslateElement({
@@ -43,7 +45,6 @@ const TranslateForMe = {
       throw new Error("[TranslateForMe] Error creating elements, element with class vlOXsRZG apJZTsAb sZPanrSdXu lksoO yuHFGkiOEFCADwsQGsOE-close-button was not found");
     }
     _Akm.addEventListener("click", function () {
-      console.log("click")
       _MenuDiv.classList.add("show")
     })
 
@@ -153,6 +154,18 @@ const TranslateForMe = {
     const menuComponent1_body_a_lengagues_list = document.createElement("_vdi");
     menuComponent1_body_a_lengagues_list.classList.add("badge-colors", "rECgD", "tnvsodHB");
     menuComponent1_body_a_lengagues.appendChild(menuComponent1_body_a_lengagues_list);
+
+    if(a.length === 0) {
+      LangsAvaliable.forEach(lang => {
+        let dinamic_element = document.createElement("img");
+        dinamic_element.classList.add("iMmG", "OAIbXXx");
+        dinamic_element.src = b[lang].img;
+        dinamic_element.setAttribute("alt", b[lang].name);
+        dinamic_element.setAttribute("title", b[lang].name);
+        dinamic_element.setAttribute("onclick", "TranslateForMe.actions.changeLangue('" + lang + "')");
+        menuComponent1_body_a_lengagues_list.appendChild(dinamic_element);
+      });
+    }
 
     a.forEach(lang => {
       if (typeof b[lang] !== "undefined") {
@@ -463,14 +476,14 @@ const TranslateForMe = {
       }
     },
     checkSave: function (value: any) {
-      if(typeof TranslateForMe.attributes.getCookie("googtrans") !== "undefined" || TranslateForMe.attributes.getCookie("googtrans") !== null){
-          if(value !== null || value !== undefined) {
-            if(value === "false"){
-              return TranslateForMe.actions.desactiveSave(false);
-            }
-          }else{
+      if (typeof TranslateForMe.attributes.getCookie("googtrans") !== "undefined" || TranslateForMe.attributes.getCookie("googtrans") !== null) {
+        if (value !== null || value !== undefined) {
+          if (value === "false") {
             return TranslateForMe.actions.desactiveSave(false);
           }
+        } else {
+          return TranslateForMe.actions.desactiveSave(false);
+        }
       }
     },
     saveConfiguration: function () {

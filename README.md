@@ -76,8 +76,8 @@ Options:
 
 - languages
 
-  type: `Array[]`  
-  Default: `'<unknown>'`
+  Type: `Array[]`  
+  Default: `['all languages ​​available']`
 
   Languages that will be added in the menu   <a href="#more">List</a>
 
@@ -99,7 +99,7 @@ Options:
 
 languages:
 ``
-["pt","en"]
+["en","pt","bn","zh-CN","zh-TW","es","fr","ja","ru"]
 ``
 More languages will be added soon.
 
